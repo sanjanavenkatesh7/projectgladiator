@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <h1>
+            We found the following results for the searched Merchandise record
+        </h1>
+    </lightning-card>
+    
+    <lightning-datatable
+        key-field="id"
+        data={searchresults}
+        columns={columns}>
+    </lightning-datatable>
+</template>
