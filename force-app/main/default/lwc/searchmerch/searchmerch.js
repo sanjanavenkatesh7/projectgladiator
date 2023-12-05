@@ -3,24 +3,24 @@ import getMerchandise from '@salesforce/apex/SearchMerchandiseInfo.getMerchandis
 
 export default class Searchmerch extends LightningElement {
     accName;
-    accPhone;
+    accStock;
 
     handleOnChangeaccName(event){
         this.accName = event.target.value;
     }
     handleOnChangeaccPhone(event){
-        this.accPhone = event.target.value;
+        this.accStock = event.target.value;
     }
     clearData(){
         this.accName = '';
-        this.accPhone = '';
+        this.accStock = '';
         this.dispatchEvent(new CustomEvent('cleardata',null))
     }
     
     initiateSearch(event){
         
-        if(!this.accPhone){
-            this.accPhone = '0';
+        if(!this.accStock){
+            this.accStock = '0';
         }
 
     
